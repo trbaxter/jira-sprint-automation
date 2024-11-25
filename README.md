@@ -6,11 +6,11 @@ This is a Python script that can be used to automate JIRA tasks in the sprint-pl
 
 # Table of Contents
 
-[Technologies Used](#technologies-used)
-[Design Diagram](#design-diagram)
-[FAQ](#faq)
-[License](#license)
-[Support](#support)
+[Technologies Used](#technologies-used)  
+[Design Diagram](#design-diagram)  
+[FAQ](#faq)  
+[License](#license)  
+[Support](#support)  
 
 <br/>
 <br/>
@@ -52,19 +52,19 @@ This is a Python script that can be used to automate JIRA tasks in the sprint-pl
 flowchart TD
 
 %% Start %%
-start([&nbsp Start &nbsp]):::start
+start([&nbsp; Start &nbsp;]):::start
 
 %% End %%
-finish([&nbsp Finish &nbsp]):::finish
+finish([&nbsp; Finish &nbsp;]):::finish
 
 %% Actions %%
-A1[&nbsp Use next sprint &nbsp \n in the backlog]:::action
-A2[&nbsp Generate &nbsp \n new sprint]:::action
-A3[Collect IDs of \n &nbsp incomplete stories &nbsp]:::action
-A4[&nbsp End current sprint &nbsp]:::action
-A5[&nbsp Move incomplete stories &nbsp \n to new sprint]:::action
-A6[&nbsp Start new sprint &nbsp]:::action
-A7[&nbsp Output error log &nbsp]:::action
+A1[&nbsp; Use next sprint &nbsp; \n in the backlog]:::action
+A2[&nbsp; Generate &nbsp; \n new sprint]:::action
+A3[Collect IDs of \n &nbsp; incomplete stories &nbsp;]:::action
+A4[&nbsp; End current sprint &nbsp;]:::action
+A5[&nbsp; Move incomplete stories &nbsp; \n to new sprint]:::action
+A6[&nbsp; Start new sprint &nbsp;]:::action
+A7[&nbsp; Output error log &nbsp;]:::action
 
 %% Decisions %%
 D1{Is there an \n upcoming sprint \n in the backlog?}:::decision
@@ -72,12 +72,12 @@ D2{Sprint created \n successfully?}:::decision
 D3{Is there \n an active sprint?}:::decision
 
 %% Yes/No Nodes %%
-YES1([&nbsp <b>Yes</b> &nbsp]):::yes_or_no
-YES2([&nbsp <b>Yes</b> &nbsp]):::yes_or_no
-YES3([&nbsp <b>Yes</b> &nbsp]):::yes_or_no
-NO1([&nbsp <b>No</b> &nbsp]):::yes_or_no
-NO2([&nbsp <b>No</b> &nbsp]):::yes_or_no
-NO3([&nbsp <b>No</b> &nbsp]):::yes_or_no
+YES1([&nbsp; <b>Yes</b> &nbsp;]):::yes_or_no
+YES2([&nbsp; <b>Yes</b> &nbsp;]):::yes_or_no
+YES3([&nbsp; <b>Yes</b> &nbsp;]):::yes_or_no
+NO1([&nbsp; <b>No</b> &nbsp;]):::yes_or_no
+NO2([&nbsp; <b>No</b> &nbsp;]):::yes_or_no
+NO3([&nbsp; <b>No</b> &nbsp;]):::yes_or_no
 
 %% Links %%
 start --> D1
