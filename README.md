@@ -58,18 +58,18 @@ start([&nbsp; Start &nbsp;]):::start
 finish([&nbsp; Finish &nbsp;]):::finish
 
 %% Actions %%
-A1[&nbsp; Use next sprint &nbsp; \nin the backlog]:::action
-A2[&nbsp; Generate &nbsp; \nnew sprint]:::action
-A3[Collect IDs of \n&nbsp; incomplete stories &nbsp;]:::action
+A1[&nbsp; Use next sprint &nbsp; <br/> in the backlog]:::action
+A2[&nbsp; Generate &nbsp; <br/> new sprint]:::action
+A3[Collect IDs of <br/> &nbsp; incomplete stories &nbsp;]:::action
 A4[&nbsp; End current sprint &nbsp;]:::action
-A5[&nbsp; Move incomplete stories &nbsp; \nto new sprint]:::action
+A5[&nbsp; Move incomplete stories &nbsp; <br/> to new sprint]:::action
 A6[&nbsp; Start new sprint &nbsp;]:::action
 A7[&nbsp; Output error log &nbsp;]:::action
 
 %% Decisions %%
-D1{Is there an \nupcoming sprint \nin the backlog?}:::decision
-D2{Sprint created \nsuccessfully?}:::decision
-D3{Is there \nan active sprint?}:::decision
+D1{Is there an <br/> upcoming sprint <br/> in the backlog?}:::decision
+D2{Sprint created <br/> successfully?}:::decision
+D3{Is there <br/> an active sprint?}:::decision
 
 %% Yes/No Nodes %%
 YES1([&nbsp; <b>Yes</b> &nbsp;]):::yes_or_no
