@@ -1,13 +1,18 @@
 # Description
 This is a Python script that can be used to automate JIRA tasks in the sprint-planning process for scrum teams.
 
+These tasks include: 
+- Sprint creation and sprint ending events
+- Transferring incomplete JIRA issues from one sprint to the next
+
 <br/>
 <br/>
 
-# Table of Contents
+## Table of Contents
 
 [Technologies Used](#technologies-used)  
 [Design Diagram](#design-diagram)  
+[How to Use](#how-to-use)
 [FAQ](#faq)  
 [License](#license)  
 [Support](#support)  
@@ -15,27 +20,41 @@ This is a Python script that can be used to automate JIRA tasks in the sprint-pl
 <br/>
 <br/>
 
-# Technologies Used
+## Technologies Used
 
-<b>Python v3.7</b> - Core language used in the automation script.
+<ins>Python v3.13.0</ins>
 
-<b>Python Libraries:</b>  
+Core language used.
 
-`requests` - Used for making HTTP requests to interact with the JIRA API.  
-`base64` - Used for encoding JIRA credentials into a base64 string for authentication.  
-`os` - Used to access environment variables securely, such as API tokens and email addresses.  
-`datetime` & `timedelta` - Used to manage date and time calculations for sprint start and end periods.  
-`logging` - Used to handle output and logging throughout the script.  
-`certifi` - Used to handle SSL certificate verification and ensure HTTPS connections are secure.
+<br/>
 
-<b>JIRA Agile REST API</b> - Contains the endpoints that the script interacts with.
+<ins>Python Libraries</ins>  
 
-<b>Mermaid</b> - Used in the README markdown file to document and visualize the logical workflow of the script.  
+`requests` - Makes HTTP requests to interact with the JIRA API.  
+`base64` - Encodes JIRA credentials into a base64 string for authentication.  
+`os` - Accesses environment variables securely.  
+`datetime` & `timedelta` - Manages date and time calculations.  
+`logging` - Handles output and logging.    
+`certifi` - Handles SSL certificate verification.  
+`time` - Creates wait times between batch submissions of issues to the JIRA API.  
+`sys` - Raises exceptions that signal failure to the GitHub Actions workflow.   
+
+<br/>
+
+<b>JIRA Agile REST API</b>
+
+Possesses the endpoints that the script interacts with.
+
+<br/>
+
+<b>Mermaid</b>
+
+Used in the README markdown file to document and visualize the logical workflow of the script.  
 
 <br/>
 <br/>
 
-# Design Diagram
+## Design Diagram
 
 ```mermaid
 
@@ -99,18 +118,28 @@ classDef start stroke: #0f0, stroke-width: 2.5px;
 classDef finish stroke: #f00, stroke-width: 2.5px;
 classDef decision stroke: #cc5500, stroke-width: 2.5px;
 classDef action stroke: #196de3, stroke-width: 2.5px;
-classDef yes_or_no stroke: #fff, stroke-width: 2.5px;
+classDef yes_or_no stroke: #fff, stroke-width: 1.5px;
 ```
 
 <br/>
 <br/>
 
-# FAQ
+## How to Use
+
+(Section coming soon)
+
+<br/>
+<br/>
+
+## FAQ
 
 <details>
 <summary>&nbsp; How is the new sprint named? &nbsp;</summary><br/>
 
-> The new sprint will be generated using the definition of the `sprint_name` variable.
+> The new sprint name will be generated using the definition of the `sprint_name` variable.
+> 
+> Users may customize this variable to take advantage of dynamically-generated sprint names if successive sprints use a particular 
+> naming convention.
 
 </details>
 
@@ -121,6 +150,8 @@ classDef yes_or_no stroke: #fff, stroke-width: 2.5px;
 
 > Because sprints are closed before a transfer occurs, any unfinished stories will display as 'Issues Not Completed' in the sprint
 > status report. 
+> 
+> This approach avoids the appearance of users manually removing their stories from a sprint.
 
 </details>
 
@@ -132,15 +163,14 @@ classDef yes_or_no stroke: #fff, stroke-width: 2.5px;
 > The script runs automatically based off the `cron` expression in the sprint_automation yaml file located in the .github folder.  
 >   
 > More information on cron expressions can be found [here](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules).  
-> 
-> The current configuration runs on a bi-weekly schedule based on the initial run date, aligning with the typical 2-week sprint period.
+
 
 </details>
 
 <br/>
 <br/>
 
-# License
+## License
 
 This project, including the Python script and accompanying documentation, is licensed under the MIT license. See the [LICENSE](LICENSE)
 file for details.
@@ -148,6 +178,6 @@ file for details.
 <br/>
 <br/>
 
-# Support
+## Support
 
 For any questions or assistance, please reach out to the project creator. 
