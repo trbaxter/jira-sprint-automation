@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jira-sprint-automation"
+version = "1.0.0"
+description = "Automates JIRA sprint tasks for scrum teams."
+requires-python = ">=3.13"
+authors = [{name = "Tyler Baxter"}]
+
+# Development dependencies
+[project.optional-dependencies]
+dev = [
+    "black==24.10.0",
+    "flake8==7.1.1",
+    "flake8-docstrings==1.7.0",
+    "pytest==8.3.4",
+    "pytest-cov==6.0.0",
+    "coverage==7.6.10",
+    "pre_commit==4.0.1",
+    "pytest-sugar==1.0.0"
+]
+
+# Operational dependencies
+dependencies = [
+    "requests==2.32.3",
+    "responses==0.25.5",
+    "certifi==2024.12.14",
+]
+
+# Black formatter config settings
+[tool.black]
+line-length = 79
+exclude = '''
+/(
+    \.git
+    | \.venv
+    | build
+    | dist
+    | \.mypy_cache
+    | \.pytest_cache
+    | \.tox
+    | \.coverage
+    | htmlcov
+    | .*\.md$
+    | .*\.toml$
+    | .*\.yaml$
+    | .*\.yml$
+    | .*\.txt$
+)/
+'''
+
+[tool.coverage.run]
+branch = true
+data_file = ".coverage"
+source = ["automation_script"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["test"]
+addopts = "-q --disable-warnings -rA --cov-report=html"
