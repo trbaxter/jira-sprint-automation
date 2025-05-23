@@ -21,6 +21,7 @@ htmlcov/
 
 # IntelliJ project metadata
 /.idea/
+.idea
 
 # Default ignored files
 /shelf/
