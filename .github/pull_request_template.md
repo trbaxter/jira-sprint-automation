@@ -30,7 +30,7 @@
 * [ ] Yes
 * [ ] No
 
-#### <b>Comments:</b>
+<b>Comments:</b> 
 
 
 <br/>
@@ -41,7 +41,7 @@
 * [ ] 80%+
 * [ ] Below 80%
 
-#### <b>Comments:<b/>
+<b>Comments:</b> 
 
 
 
